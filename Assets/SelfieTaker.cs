@@ -28,7 +28,7 @@ public class SelfieTaker : MonoBehaviour
         rt = new RenderTexture(captureWidth, captureHeight, 32, RenderTextureFormat.ARGB32);
         cam.targetTexture = rt;
 
-       // cam.enabled = false;
+       cam.enabled = false;
 
     }
 
@@ -65,7 +65,6 @@ public class SelfieTaker : MonoBehaviour
 
 
 
-      //  cam.enabled = true;
 
         //move camera to position. in the future maybe randomize the position a bit so each take is from a different angle?
         transform.position = target.transform.position + new Vector3(0, -10, 0);
@@ -93,7 +92,6 @@ public class SelfieTaker : MonoBehaviour
         {
             onFinish(filePath);
         }
-      //  cam.enabled = false;
 
 
         yield break;
